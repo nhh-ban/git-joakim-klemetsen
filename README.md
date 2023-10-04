@@ -6,7 +6,7 @@ This is the first assignment in BAN400. As you know -- given that you have come 
 
 **Name:** Joakim Dobbe Klemetsen
 
-**Student number:**
+**Student number:** s203700
 
 ## :information_source: Problem 1
 Update the personal information above.
