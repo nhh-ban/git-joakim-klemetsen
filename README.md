@@ -4,7 +4,7 @@ This is the first assignment in BAN400. As you know -- given that you have come 
 
 **Date:** 04.10.2023
 
-**Name:**
+**Name:** Joakim Dobbe Klemetsen
 
 **Student number:**
 
