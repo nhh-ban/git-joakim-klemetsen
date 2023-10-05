@@ -39,6 +39,14 @@ df <-
 
 # Investigate data frame
 df
+
+# Transform variable 'log_m26' and 'log_mhi' from character to numeric, 
+# and remove unexpected symbols in 'log_mhi' 
+df_clean <- 
+  df %>% 
+  mutate(
+    log_m26 = as.numeric(log_m26),
+    log_mhi = as.numeric(str_replace_all(log_mhi, "<", "")))
 # ---
 
 df_test <- read_csv(
