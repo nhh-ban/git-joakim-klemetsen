@@ -19,20 +19,8 @@ var_descr <- raw_data[1:(L-1)]
 
 # Read data to a tidy data frame ---
 
-# Read the data into a tibble, skipping the lines stored in 'var_descr'
-data <- 
-  read_delim(
-    "suites_dw_Table1.txt", 
-    delim = "|",           
-    skip = header_start-2, 
-    trim_ws = TRUE          
-  ) %>% 
-  # Clean names and trim white spaces
-  janitor::clean_names() %>% 
-  mutate(across(everything(), str_trim)) %>% 
-  # Convert empty strings to NA
-  mutate(across(where(is.character), na_if,"")) %>% 
-  mutate(across(where(is.numeric), na_if, NA))
+# Save the part of raw data containing values of interest
+data <- raw_data[(L+1):length(raw_data)]
 
 # Remove annoying separator line from the data frame
 data <- 
