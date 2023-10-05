@@ -33,8 +33,8 @@ df <-
   )
 
 # Remove annoying separator line from the data frame
-data <- 
-  data %>% 
+df <- 
+  df %>% 
   slice(-1)
 # ---
 
