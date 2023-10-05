@@ -36,6 +36,9 @@ df <-
 df <- 
   df %>% 
   slice(-1)
+
+# Investigate data frame
+df
 # ---
 
 df_test <- read_csv(
