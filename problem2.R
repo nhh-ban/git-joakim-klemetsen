@@ -22,6 +22,16 @@ var_descr <- raw_data[1:(L-1)]
 # Save the part of raw data containing values of interest
 data <- raw_data[(L+1):length(raw_data)]
 
+# Convert the data to a data frame
+df <- 
+  data %>% 
+  read.delim(
+    text = .,
+    header = TRUE,
+    sep = "|",
+    strip.white = TRUE
+  )
+
 # Remove annoying separator line from the data frame
 data <- 
   data %>% 
