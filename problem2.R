@@ -10,13 +10,11 @@ raw_file <- readLines("suites_dw_Table1.txt")
 
 # Saving the variable descriptions ---
 
-# Locate the separation row between variable desriptions and the values
+# Locate the separation row between variable descriptions and the values
 L <- which(raw_data == " ")
 
 # Save variable descriptions
-cat(raw_file[1:(header_start-2)], 
-    sep = "\n", 
-    file = "variable_descriptions.txt")
+var_descr <- raw_data[1:(L-1)]
 # ---
 
 # Read data to a tidy data frame ---
