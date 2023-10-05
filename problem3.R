@@ -33,5 +33,20 @@ plotVariable <- function(data, variable) {
 }
 # ---
 
+# Loop over variables in the data frame and create list of plots ---
 
+# Initialize empty list to store plots
+plot_list <- list()
 
+# Loop over all variables
+for (variable in names(df_clean)) {
+  
+  # Create plot
+  p <- plotVariable(data = df_clean, variable = variable)
+  
+  # Store plot in list if p is not NULL (not numeric or integer)
+  if (!is.null(p)) {
+    plot_list[[variable]] <- p
+  }
+}
+# ---
