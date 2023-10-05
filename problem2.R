@@ -13,8 +13,15 @@ raw_data <- readLines("suites_dw_Table1.txt")
 # Locate the separation row between variable descriptions and the values
 L <- which(raw_data == " ")
 
-# Save variable descriptions
+# Save variable descriptions in a variable
 var_descr <- raw_data[1:(L-1)]
+
+# Save the variable descriptions in a text file
+cat(
+  var_descr,
+  file = "variable_description.txt",
+  sep = ";"
+)
 # ---
 
 # Read data to a tidy data frame ---
