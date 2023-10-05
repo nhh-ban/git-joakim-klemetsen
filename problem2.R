@@ -10,8 +10,8 @@ raw_file <- readLines("suites_dw_Table1.txt")
 
 # Saving the variable descriptions ---
 
-# Identify the header line
-header_start <- which(grepl("^\\s*name\\s*", raw_file))[2]
+# Locate the separation row between variable desriptions and the values
+L <- which(raw_data == " ")
 
 # Save variable descriptions
 cat(raw_file[1:(header_start-2)], 
