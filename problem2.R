@@ -49,7 +49,3 @@ df_clean <-
     log_mhi = as.numeric(str_replace_all(log_mhi, "<", "")))
 # ---
 
-df_test <- read_csv(
-  "suites_dw_Table1.txt",
-  skip = header_start - 2,
-)
