@@ -5,7 +5,7 @@ library(tidyverse)
 # ---
 
 # Load raw data ---
-raw_file <- readLines("suites_dw_Table1.txt")
+raw_data <- readLines("suites_dw_Table1.txt")
 # ---
 
 # Saving the variable descriptions ---
