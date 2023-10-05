@@ -1,7 +1,7 @@
 # Problem 3 - Git and Github Assignment
 
 # Load required packages ---
-
+library(patchwork) # combine plots
 # ---
 
 # Create a function that plots histograms ---
@@ -49,4 +49,8 @@ for (variable in names(df_clean)) {
     plot_list[[variable]] <- p
   }
 }
+# ---
+
+# Create a plot to analyze the data in the data frame ---
+combined_plot <- wrap_plots(plotlist =plot_list, ncol = 5)
 # ---
